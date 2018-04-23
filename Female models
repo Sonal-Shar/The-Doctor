@@ -1,0 +1,79 @@
+label femaleModels:
+    $randomFem = renpy.random.randint(1,2) # (randomize between 1 and 2)
+    if randomFem==1:
+       $fem1 = 1
+       jump femaleModelOne
+    elif randomFem==2:
+        $fem2 = 1
+       jump femaleModelOne
+
+label femaleModelOne:
+    if $fem1 = 1:
+      show fem1
+    elif fem2 = 1:
+      show fem2
+    doctor"So here is our first model. We've already taken some great shots of her face and body."
+    doctor"All you have to do is fix her up!"
+    menu:
+        me"Fix her up?"
+        "Okay, sure, no problem!":
+            jump okayFemaleFix
+        "What needs to be fixed?":
+            jump notOkayFemaleFix
+
+label okayFemaleFix:
+    "Great, let's get started!"
+    doctor"So, here's our patient for the day."
+    menu:
+        "What would you like to work on first?"
+        "Her face.":
+            jump femaleFace1
+        "Her body.":
+            jump femaleBody1
+            
+label femaleFace1:
+
+label notOkayFemaleFix:
+    "She isn't perfect! She needs to look beautiful or else no one will think twice about the magazine!"
+    menu:
+        "Yeah, you're right.":
+            jump okayFemaleFix
+        "But she already is beautiful.":
+            jump notOkayFemaleFix1
+    
+label notOkayFemaleFix1:
+    doctor"She is not exactly like the others! I mean,  look at her!"
+    doctor"She isn't skinny enough, her nose is crooked, there are so many problems! No one will like her like this!"
+    menu:
+        "Yeah, you're right.":
+            jump okayFemaleFix
+        "There's no need for her to be 'fixed'.":
+            jump notOkayFemaleFix2
+label notOkayFemaleFix2:
+     doctor"Dear, she needs help or all of the media will laugh at her! How would you feel about that?"
+     menu:
+        "I'd feel bad... maybe you're right...":
+            jump okayFemaleFix
+        "She doesn't need help!":
+            jump notOkayFemaleFix3
+label notOkayFemaleFix3:
+     doctor"If you continue dear, I'm going to have to have you kicked out of my office and you will never get a job again."
+     menu:
+        "Grr. Fine, I'll fix her.":
+            jump okayFemaleFix
+        "I don't care, she doesn't need this! She's fine just the way she is.":
+            jump notOkayFemaleFix4
+
+label notOkayFemaleFix4:
+    doctor"This is your last chance dear..." 
+    menu:
+        "Okay, okay, you win, I'll fix her.":
+            jump okayFemaleFix
+        "Fire me, I don't care!":
+            jump theEnd1
+            
+label theEnd1:
+    doctor "Oh dear, you aren't being fired. We can't let you leave, or else our secret will get out!"
+    doctor"Now..."
+    doctor"Say goodbye."
+    return
