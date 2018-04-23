@@ -1,3 +1,4 @@
+#### Add a warning at the beginning, to where the player will only be choosing options, not actually photoshopping. 
 label femaleModels:
     $randomFem = renpy.random.randint(1,2) # (randomize between 1 and 2)
     if randomFem==1:
@@ -27,12 +28,16 @@ label okayFemaleFix:
     menu:
         "What would you like to work on first?"
         "Her face.":
-            jump femaleFace1
+            jump femaleFace
         "Her body.":
-            jump femaleBody1
+            jump femaleBody
             
-label femaleFace1:
-
+label femaleFace:
+      doctor"Excellent!"
+      doctor"So, since we already have pictures of her face, we will use ShopPhoto to make the alterations."
+      me"Don't you mean PhotoShop?"
+      doctor"Ah, copyright, ya know?"
+      doctor"Anyways, to start off, 
 label notOkayFemaleFix:
     "She isn't perfect! She needs to look beautiful or else no one will think twice about the magazine!"
     menu:
