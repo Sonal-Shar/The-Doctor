@@ -1,0 +1,34 @@
+# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define me = Character("Me")
+
+
+# The game starts here.
+
+label start:
+
+    # Show a background. This uses a placeholder by default, but you can
+    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
+
+    scene black
+    
+    "..."
+    me"Anywhere I go, I see them."
+    
+    scene ad1
+    pause 3
+    scene ad2
+    pause 3
+    me"They're everywhere. They're all around us"
+    scene ad3
+    me"They've changed everyone. We're all influenced." 
+    scene room
+    me"The way we look at ourselves... the way we see others... you can't avoid it."
+    me"We're all stuck in the same hell here..."
+    scene
+    
+    return
