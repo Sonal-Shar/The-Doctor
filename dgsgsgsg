@@ -1,0 +1,165 @@
+# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define me = Character("[name]")
+define dad = Character("Father", who_color="#4fa5c6")
+define mom = Character("Mother", who_color="#b7a2ef")
+define bro = Character("Theo", who_color="#31B404")
+define unknown = Character("???", who_color="#999999")
+define aster= Character("Aster", who_color="dd4b16")
+define teacher = Character("Teacher",who_color="#cc9588")
+define shannon = Character("Shannon", who_color="#C80764")
+define cole = Character("Cole", who_color="##FF0000")
+
+# VARIABLES FOR DIFFERENT THINGS
+default angrydad = False
+# The game starts here.
+label splashscreen:
+    scene black
+    with Pause(1)    
+    show logo with fade
+    with Pause(3)  
+    show warning with fade
+    with Pause (4)    
+    show splash
+    with Pause(7)
+    return
+    
+label start:
+
+    scene black
+    # Enter your character's name
+    python:
+        name = renpy.input(("What's your name?"))
+
+        name = name.strip() or __("MC")
+    with Pause(3) 
+    me"I wasn’t always like this, you know? I used to be… happy."
+    me"But as I went along in life, I realized I kept asking myself the same question…"
+    me"Where did my happiness go?" 
+    me"To be honest, I didn’t know myself. If I knew, maybe I could get it back. But I had no clue what happened to it."
+    me"I did know why I was losing it though- I saw the others."
+
+    scene perfect
+    with fade
+    me"The perfect people. The people who were always happy, the people who were beautiful, the people who got the good grades… they were always better than me."
+    me"They were everywhere, I couldn’t escape them. They were on the news, on the front cover of magazines… they were following me."
+    me"Tormenting me."
+    me"Destroying me."
+    me"I gave up trying to deny the facts. They were hurting my self esteem. But what could I do about it?"
+    scene black
+    with fade
+    me"It’s the same thing every day… but no more."
+    me"I’m giving myself one last chance. I will fight one more time, and if I lose, I will end it all."
+    me"I’m giving myself X amount of days to finish this…"
+    me"Before I end it myself."
+
+    scene bedroom morning 
+    with fade
+    me"Another wonderful day in this shitty life…"
+    scene alarm clock
+    
+    "{i}8:20 am{/i}"
+    me"Sigh. Twenty minutes before school starts... I better get ready."
+
+    scene bathroom
+    with fade
+    me"..."
+    me"You know, I really hate you"
+    me"I really hate you."
+    me"You make me so mad"
+
+    scene upclose 
+    me"I wish you were dead…"
+    me"You’re ugly… you’re stupid…"
+
+    with hpunch
+    with vpunch
+
+    scene black 
+    with Pause(1)
+
+    scene upclose crack
+    with fade
+    me"Crap. I shouldn’t have done that."
+    mom"KID GET DOWN HERE! DO YOU WANT NO BREAKFAST?!"
+    me"Better go… I’ll deal with this later"
+    scene kitchen
+    with fade
+    show mom with dissolve
+    mom"WHERE WERE YOU?! WHY DID YOU WAKE UP SO LATE?!"
+    me"Sorry mother."
+    mom"WHY CAN’T YOU BE LIKE YOUR YOUNGER BROTHER?! HE’S SO SWEET AND ALWAYS NICE."
+    me"I’m sorry mother. I will try harder to be more like him."
+    mom"Grab your breakfast and get out of my sight!"
+    hide mom
+    scene toast
+    with fade
+    me"That's my breakfast?"
+    mom"If you were here earlier you would've gotten something better."
+    mom"But instead you decided to sleep in."
+    mom"If you're going to disrespect me by not waking up, you're going to deal with the breakfast I give you."
+    me"Yes mother."
+    scene kitchen 
+    with fade
+    dad" [name]! Get over here NOW!"
+    menu:
+        "Should I go? I might end up late for school..."        
+        "Go to father.":
+            jump livingRoom
+        "Go to school.":
+            $ angryDad = True
+            jump school
+
+label livingRoom:
+    scene livingroom 
+    with fade
+    me"Are you in here?"
+    show brother with dissolve
+    bro"Nah, he's in the garage. Want a ride to school?"
+    me"Sure. Thanks bro."
+    bro"No problem"
+    jump school
+    
+label school:
+    scene hallway
+    with fade
+    unknown"Hey, [name]!"
+    me"Hmm?"
+    "I turned around to look at the familiar face behind me."
+    me"Hey Aster."
+    "This is my best friend Aster. He's pretty happy and carefree... I envy him."
+    aster"Did you get the homework done?"
+    me"For which class?"
+    aster"Morfran's."
+    me"Yeah, why?"
+    aster"Can I copy yours? I didn't get mine done"
+    me"..."
+    aster"..."
+    me"...Did you get any of it done?"
+    aster"...Haha... No."
+    me"Sigh. Whatever, sure."
+    aster"Thanks dude!"
+    #bell rings
+    me"C'mon, we better run to class!"
+    
+    scene classroom with fade
+    #Second bell rings
+    teacher"You're just in time. Take your seats."
+    
+    scene black with fade
+    me"Class went on as it normally does. Same boring stuff- teacher talks, we take notes. Nothing new."
+    #bell rings
+    
+    scene classroom with fade
+    aster"Hey, pass me your homework dude!"
+    me"Yeah, yeah, here." 
+    "I gave them my homework just as the 'Perfect Two' came along"
+    cole"Hey stupid. The hell is my homework?"
+    me"I don't have it." 
+    cole"You better hurry up and give it to me, or you're going to get it." 
+    
+    
+    return
