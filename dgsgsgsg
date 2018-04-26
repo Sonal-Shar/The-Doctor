@@ -4,14 +4,19 @@
 # name of the character.
 
 define me = Character("[name]")
-define dad = Character("Father", who_color="#4fa5c6")
-define mom = Character("Mother", who_color="#b7a2ef")
+define dad = Character("Father", who_color="#a54f2b")
+define mom = Character("Mother", who_color="#f9d6f1")
 define bro = Character("Theo", who_color="#31B404")
 define unknown = Character("???", who_color="#999999")
-define aster= Character("Aster", who_color="dd4b16")
-define teacher = Character("Teacher",who_color="#cc9588")
-define shannon = Character("Shannon", who_color="#C80764")
-define cole = Character("Cole", who_color="##FF0000")
+define aster= Character("Aster", who_color="67f90c")
+define teacher = Character("Teacher",who_color="#999999")
+define stella = Character("Stella", who_color="#C80764")
+define caleb = Character("Caleb", who_color="##FF0000")
+define morfran = Character("Morfran", who_color="e5dd72")
+define prez = Character("Student President", who_color="4ba37e")
+define vincent = Character("Vincent", who_color="997b8b")
+define felicity = Character("Felicity", who_color="f5e0fc")
+define therapist = Character("Ms. Iris", who_color="adf7e2")
 
 # VARIABLES FOR DIFFERENT THINGS
 default angrydad = False
