@@ -265,13 +265,71 @@ label school:
         jump bedroom
    
 label bedroom:
-    scen
+    scene bedroom
     "Forget about the homework. There's no point to it. Not like it matters if I do it or not, I'm still passing."
     "I'm just gonna sleep."
+    jump dream
+label dream:
+    scene black
+    "..."
+    unknown"Wake up."
+    me"ZZzzzz..."
+    unknown"I said WAKE UP!"
+    me"GAH!"
+    show unknown
+    me"Who... who are you?"
+    unknown"Who knows? Who cares? We're here to talk about you Donny-boy."
+    me"..."
+    me"Am I still asleep?"
+    unknown"Figure that out yourself."
+    unknown"So, what's your plan?"
+    me"My plan?"
+    unknown"What are you going to do about all of {i}them{/i}?
+    me"I... I don't know what you're talking abou-"
+    with hpunch
+    unknown"dO nOT LiE tO ME. I cAN reAd YoU cLEaRlY."
+    me"... If you can read me clearly, then figure it out yourself."
+    unknown"There's more to life than what is shown before you Donny."
+    me"I don't know what you're talking about."
+    unknown"You want people to change? You want to see people differently? Then make the change."
+    unknown"Waiting for a miracle doesn't work in this life. You gotta work for it."
+    me"And if I don't?"
+    unknown"You die. Simple."
+    me"I'm not afraid of death."
+    unknown"You don't have to be afraid of living either."
+    me"I don't have to listen to you."
+    unknown"You don't get much of a choice. After all, I know what's best, and we can't survive without each other."
+    me"And you are?"
+    unknown"I am whoever you want me to be."
+    unknown"You don't have much time left Donny. Better start fighting for survival now, before you're fully claimed."
+    unknown"Because once that happens..."
+    unknown"You can't come back."
+    me"I-"
+    unknown"Shut it. It's time for you to wake up.
+    me"I'm not done talking to you."
+    unknown"Goodbye Donny."
+    me"No wait-!"
+    hide unknown with dissolve
+    me"WAIT!"
+    me"WAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIIIIIIIIIT!!!"
+    scene bedroom
+    with hpunch
+    "*huff* *huff*"
+    me"God damn... what kind of a dream was that?"
+    scene alarm clock
+    me"Damn, I even woke up early..."
+    scene bedroom
+    menu:
+    me"Hmm... should I listen to them?"
+    "Yes":
+        jump timeForChange
+    "No":
+        jump endingOne
     
     
     
     
     
     
-    scene 
+   
+    
