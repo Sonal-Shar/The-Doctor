@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define me = Character("[name]")
+define me = Character("Donovan")
 define dad = Character("Father", who_color="#a54f2b")
 define mom = Character("Mother", who_color="#f9d6f1")
 define bro = Character("Theo", who_color="#31B404")
@@ -13,7 +13,7 @@ define teacher = Character("Teacher",who_color="#999999")
 define stella = Character("Stella", who_color="#C80764")
 define caleb = Character("Caleb", who_color="##FF0000")
 define morfran = Character("Morfran", who_color="e5dd72")
-define prez = Character("Student President", who_color="4ba37e")
+#define prez = Character("Student President", who_color="4ba37e")
 define vincent = Character("Vincent", who_color="997b8b")
 define felicity = Character("Felicity", who_color="f5e0fc")
 define therapist = Character("Ms. Iris", who_color="adf7e2")
@@ -109,7 +109,7 @@ label start:
     me"Yes mother."
     scene kitchen 
     with fade
-    dad" [name]! Get over here NOW!"
+    dad"DONOVAN! Get over here NOW!"
     menu:
         "Should I go? I might end up late for school..."        
         "Go to father.":
@@ -131,7 +131,7 @@ label livingRoom:
 label school:
     scene hallway
     with fade
-    unknown"Hey, [name]!"
+    unknown"Hey Donny!"
     me"Hmm?"
     "I turned around to look at the familiar face behind me."
     me"Hey Aster."
@@ -148,7 +148,7 @@ label school:
     me"Sigh. Whatever, sure."
     aster"Thanks dude!"
     #bell rings
-    me"C'mon, we better run to class!"
+        me"C'mon, we better run to class."
     
     scene classroom with fade
     #Second bell rings
@@ -156,15 +156,122 @@ label school:
     
     scene black with fade
     me"Class went on as it normally does. Same boring stuff- teacher talks, we take notes. Nothing new."
-    #bell rings
+    "{i}Bell rings{i}"
     
     scene classroom with fade
+    show aster
     aster"Hey, pass me your homework dude!"
     me"Yeah, yeah, here." 
-    "I gave them my homework just as the 'Perfect Two' came along"
+    "I gave him my homework just as the 'Perfect Two' came along"
+    hide aster with dissolve
+    show cole
+    show stella
     cole"Hey stupid. The hell is my homework?"
     me"I don't have it." 
     cole"You better hurry up and give it to me, or you're going to get it." 
+    aster"He said he doesn't have him, so just screw off!"
+    cole"Kek."
+    hide cole
+    hide stella
+    show aster
+    aster"Man, those guys suck. I'm sorry dude."
+    me"It's 'kay.'"
+    aster"No, it's not. You should tell a teacher man."
+    me"Like they're gonna do anything."
+    "{i}Bell rings{i}"
+    aster"C'mon, let's get ready for Mr. Morfran's class."
+    scene black
+    with fades
+    "Zzz"
+    with vpunch
+    morfran"How dare you sleep in my class?!"
+    scene classroom
+    show morfran
+    morfran"If you think you can sleep in my class, maybe the hallway would be more suitable for you!"
+    me"Sir, I-"    
+    morfran"OUT!!"
+    scene hallway
+    with fade
+    "Guess I'm stuck out here until school ends... god he's strict."
+    scene black
+    with Pause(2)
+    scene lockers
+    show aster
+    aster"Hey Donny!"
+    me"Hey."
+    aster"Wanna hang out?"
+    me"Can't. Gotta go to therapy every day save the weekends."
+    aster"Aw damn, I forgot about that. The weekend then?"
+    me"Sure. I'll see you tomorrow."
+    scene black
+    with fade
+    "I walked to my group therapy session after school. I have group therapy every other day, and I meet with my therapist in between."
+    "The people are kind of weird, but that's what you get when all of us are fifty shades of messed up."
+    scene therapy room
+    show therapist 
+    therapist"Hello Donovan!" You're just on time. Come, take a seat."
+    me"Yes ma'am."
+    hide therapist with dissolve
+    scene group therapy
+    show felicity at left with easeinright
+    show theapist with easeinright
+    show vincent at right with easeinright
+    "These are the people that are here with me. There are only two others, but the therapist likes having small groups."
+    "To the left is Felicity, a girl who's quite shy. She has really bad anxiety.""
+    "To the right is Vincent, some guy who has a really bad eating disorder."
+    "In the center of it all is my therapist, Ms. Iris. I have to see her everyday. She's nice."
+    "Dunno why she puts up with my shit though..." 
+    therapist"What about you, Donovan?"
+    "Oh crap."
+    me"I'm sorry, I wasn't listening. What was it that you just said?"
+    therapist"I asked you how are you holding up at school."
+    scene group therapy malfunction
+    me"It's alright."
+    therapist"Are you sure?"
+    me"Yes ma'am."
+    therapist"This is a safe place. You can tell us anything, we'll listen."
+    vincent"Yeah man. Ain't nothing wrong that you wouldn't be able to tell us?"
+    me"..."
+    "How could I tell them? They wouldn't understand."
+    "They can't see it. They can't see how badly each of them are influenced." 
+    "They don't understand... they will never understand."
+    "I can't show them. I don't know how..."
+    "I can't-"
+    therapist"Donovan? Is everything alright?"
+    me"..."
+    me"Yeah. School's okay." 
+    therapist"Well alright. Felicity, what about you?"
+    Felicity"W-w-well, I-"
+    "I drowned them out. I didn't care about this. I wanted to go home. I wanted to sleep. 
+    scene black
+    "..."
+    therapist"That seems to end our session for today. I will see you all in two days."
+  
+    scene livingRoom
+    show mom at left
+    show dad at right
+    mom"How was therapy?"
+    me"Fine. The same as usual."
+    if dadAngry = true:
+        dad"Why didnt you come when I called you?"
+        me"I had to run to school. I was gonna be late."
+        dad"..."
+        mom"We'll talk more about this tomorrow. Get your work done and go sleep."
+        me"Okay mother."
+        jump bedroom
+   else:
+        dad"Well, go get your work done kid. We'll see you later."
+        me"Alright."
+        jump bedroom
+   
+label bedroom:
+    scen
+    "Forget about the homework. There's no point to it. Not like it matters if I do it or not, I'm still passing."
+    "I'm just gonna sleep."
     
     
-    return
+    
+    
+    
+    
+    scene 
