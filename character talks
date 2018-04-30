@@ -1,0 +1,111 @@
+label momTalk:
+    $ mom_int = mom_int + 1 
+    if mom_int < 3:
+        if mom_points = 0:
+            me"Hello mother."
+            mom"..."
+            mom"Why don't you call me mom?"
+            menu:
+                me"I will do that if you'd like me to mother.":
+                    jump failedMom
+                    me"I'm not sure, but I can try... mom.":
+                        $mom_points = mom_points + 1
+        if mom_points = 1:
+            mom"So how is school going?"
+            menu:
+                me:"It's going alright, but I'm struggling a bit.":
+                    $mom_points = mom_points +1
+                me"Pretty awful, thanks for caring.":
+                    jump failedMom
+
+        if mom_points = 2:
+            mom"Would you like us to hire a tutor for you?"
+            menu:    
+                me:"No, it's alright, I'll figure it out myself.":
+                    jump failedMom
+                me:"Actually, I was wondering if you could help me?":
+                    $mom_points = mom_points + 1
+            
+        if mom_points = 3:
+            mom"Sure, I'd love to help?"
+            menu:
+                me:"Thanks mom.":
+                    $mom_points = mom_points +1
+                me"Thanks for finally caring about me.":
+                    jump failedMom
+
+        if mom_points = 4:
+            mom"Of course sweetie, what else am I here for?"
+            menu:    
+                me:"I don't know, to mentally destroy me?":
+                    jump failedMom
+                me:"I always thought you cared about Theo more than me.":
+                    $mom_points = mom_points + 1        
+        if mom_points = 5:
+            mom"Oh sweetie."
+            mom"No matter how hard I am on you, it's only because I want you to do well."
+            mom"I'm sorry you feel this way sweetie. I'll be more kind with you."
+            mom"Just know that I still love you."
+    else:
+        mom"I don't want to talk to you right now. Please leave me alone."        
+label dadTalk:
+    $ dad_int = dad_int + 1 
+    ifdad_int < 3:
+        if dad_points = 0:
+            me"Hello mother."
+            mom"..."
+            mom"Why don't you call me mom?"
+            menu:
+                me"I will do that if you'd like me to mother.":
+                    jump failedMom
+                    me"I'm not sure, but I can try... mom.":
+                        $mom_points = mom_points + 1
+        if mom_points = 1:
+            mom"So how is school going?"
+            menu:
+                me:"It's going alright, but I'm struggling a bit.":
+                    $mom_points = mom_points +1
+                me"Pretty awful, thanks for caring.":
+                    jump failedMom
+
+        if mom_points = 2:
+            mom"Would you like us to hire a tutor for you?"
+            menu:    
+                me:"No, it's alright, I'll figure it out myself.":
+                    jump failedMom
+                me:"Actually, I was wondering if you could help me?":
+                    $mom_points = mom_points + 1
+            
+        if mom_points = 3:
+            mom"Sure, I'd love to help?"
+            menu:
+                me:"Thanks mom.":
+                    $mom_points = mom_points +1
+                me"Thanks for finally caring about me.":
+                    jump failedMom
+
+        if mom_points = 4:
+            mom"Of course sweetie, what else am I here for?"
+            menu:    
+                me:"I don't know, to mentally destroy me?":
+                    jump failedMom
+                me:"I always thought you cared about Theo more than me.":
+                    $mom_points = mom_points + 1        
+        if mom_points = 5:
+            mom"Oh sweetie."
+            mom"No matter how hard I am on you, it's only because I want you to do well."
+            mom"I'm sorry you feel this way sweetie. I'll be more kind with you."
+            mom"Just know that I still love you."
+    else:
+        mom"I don't want to talk to you right now. Please leave me alone." 
+label theoTalk:
+
+label asterTalk:
+
+label calebTalk:
+
+label stellaTalk:
+    
+label felicityTalk:
+
+label Talk:
