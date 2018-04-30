@@ -1,0 +1,61 @@
+label timeForChange:
+    me"Might as well try at least."
+    scene black
+    menu:
+        "Do I go to school today?"
+        "Yes":
+            jump schoolinteractions
+        "No":
+            jump homeInts
+    $ turkey = True
+    
+label schoolinteractions:
+    menu:
+        "What should I do?"
+        "Go to class":
+            jump teacherTalk
+        "Go to the hallway":
+            jump asterTalk
+        "Go to lockers":
+            jump calebTalk
+        "Go to bathroom.":
+            jump stellaTalk
+label homeInts:
+    $homeInt = homeInt + 1
+    me"Mom, can I stay home today."
+    if homeInt < 3:
+        mom"Sure."
+        menu:
+        "Who should I talk with?"
+        "Mother":
+            jump momTalk
+        "Father":
+            jump dadTalk
+        "Theo":
+            jump theoTalk
+    else:
+        mom"You've stayed home too much recently. Go to shcool."
+        me"Fine."
+        jump schoolinteractions
+
+    menu:
+        "Should I go talk to someone?"
+        "Yes":
+            jump homeTalk
+        "No":
+            "I decided to just relax until my therapy started."
+            jump therapyInt
+
+label therapyInt:
+    "I arrived at my therapy."
+    menu:
+        "Who should I talk with?"
+        "Vince":
+            jump vinceTalk
+        "Felicity":
+            jump felTalk
+        "Iris":
+            jump irisTalk
+        "No one"
+                "I just waited for therapy to end, like I normally do."
+    therapist"Alright, that concludes today's session, see you all tomorrow"
