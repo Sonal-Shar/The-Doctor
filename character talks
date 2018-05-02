@@ -99,11 +99,97 @@ label dadTalk:
     else:
         mom"I don't want to talk to you right now. Please leave me alone." 
 label theoTalk:
+$ bro_int = bro_int + 1 
+    if bro_int < 2:
+        if bro_points = 0:
+            bro"Hey Don!"
+            me"Hey Theo."
+            bro"Could we play a game later? Pleeeaaaase?"
+            menu:
+                me"No, I'm busy. Leave me alone.":
+                    jump failedBro
+                me"Only if you finish you homework first.":
+                        $bro_points = bro_points + 1
+                        bro"Of course!"
+        if bro_points = 1:
+            bro"Big bro, why are you so sad?"
+            menu:
+                me:"It's nothing you should worry about Theo, I'm okay.":
+                    $bro_points = bro_points +1
+                me"You'll learn about it when you're older.":
+                    jump failedBro
 
+        if bro_points = 2:
+            bro"But I am worried! Mom and dad keep talking about you going away... I don't want you to go!!"
+            menu:    
+                me:"If I have to go somewhere, then I gotta go. Stupid.":
+                    jump failedBro
+                me:"Theo, I'm not going anywhere, so you don't have to worry.":
+                    $bro_points = bro_points + 1
+            
+        if bro_points = 3:
+            bro"Everyone keeps saying you're gonna go to a place called hea-van soon."
+            me"Why are they saying that?!"
+            bro"Because you're really sad!"
+            bro"But big bro... I don't want you to go!"
+            bro"Don't be sad anymore, please! I want you to stay with me! Don't go anywhere bro!"
+            me"Okay Theo, I will try not to be sad anymore."
+            bro"Promise?"
+            me"I promise."
+    else:
+        bro"Go away! You're being mean! I don't want to talk to you when you're being mean Don!"        
 label asterTalk:
 
 label calebTalk:
+    $ caleb_int = caleb_int + 1 
+    if caleb_int < 3:
+        if caleb_points = 0:
+            caleb"..."
+            me"What are you doing?"
+            caleb"Can't you see I don't want to talk to a dweeb like you? Screw off!"
+            menu:
+                me"Fine, see you later.":
+                    jump classTime
+                    me"Do you want some help?":
+                        $caleb_points = caleb_points + 1
+        if caleb_points = 1:
+            caleb"Help?! Why the hell should I get help from someone like you?!"
+            menu:
+                me:"It's going alright, but I'm struggling a bit.":
+                    $mom_points = mom_points +1
+                me"Pretty awful, thanks for caring.":
+                    jump failedMom
 
+        if mom_points = 2:
+            mom"Would you like us to hire a tutor for you?"
+            menu:    
+                me:"No, it's alright, I'll figure it out myself.":
+                    jump failedMom
+                me:"Actually, I was wondering if you could help me?":
+                    $mom_points = mom_points + 1
+            
+        if mom_points = 3:
+            mom"Sure, I'd love to help?"
+            menu:
+                me:"Thanks mom.":
+                    $mom_points = mom_points +1
+                me"Thanks for finally caring about me.":
+                    jump failedMom
+
+        if mom_points = 4:
+            mom"Of course sweetie, what else am I here for?"
+            menu:    
+                me:"I don't know, to mentally destroy me?":
+                    jump failedMom
+                me:"I always thought you cared about Theo more than me.":
+                    $mom_points = mom_points + 1        
+        if mom_points = 5:
+            mom"Oh sweetie."
+            mom"No matter how hard I am on you, it's only because I want you to do well."
+            mom"I'm sorry you feel this way sweetie. I'll be more kind with you."
+            mom"Just know that I still love you."
+    else:
+        caleb"Tch. Beat it before I use you as my personal punching bag."     
 label stellaTalk:
     
 label felicityTalk:
